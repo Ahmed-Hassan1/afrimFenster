@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Fenster Pro Ramani Afrim</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <div class="overlay" id="hide-overlay"></div>
+    <header >
+        <div class="mainHeader">
+            <!-- sticky contact -->
+            <div class="mainHeader-Top">
+                <div class="container mainHeade-minHeight">
+                    <div class="mainHeader-Top-Text">
+                        Haben Sie Fragen? Rufen Sie uns an: <span style="color: orange;">+43 {{number.number}}</span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- sticky navbar -->
+            <div style="background-color: rgba(255, 255, 255, 1);">
+                <div class="container">
+                    <div style="display: flex;">
+                        <!-- logo -->
+                        <a href="{% url 'home' %}"><img src="/static/images/logo.jpg" alt="" style="width: 150px; min-width: 150px; max-inline-size: 150%; margin-right: 10px;"></a>
+                        
+        
+                        <nav style="margin: 30px;"  id="mainMenu">
+                            <ul class="menu">
+                                <li class="nav-link">
+                                    <a href="#">FENSTER
+                                        <ul class="subMenu">
+                                            <li><a href="{% url 'fenster' %}">FENSTER</a></li>
+                                            <li><a href="{% url 'kunalufenster' %}">KUNSTSTOFF ALU FENSTER</a></li>
+                                            <li><a href="{% url 'holzalufenster' %}">HOLZ ALU FENSTER</a></li>
+                                            <li><a href="{% url 'holzfenster' %}">HOLZFENSTER</a></li>
+                                        </ul>
+                                    </a>
+                                </li>
+
+                                <li class="nav-link"><a href="{% url 'turen' %}">TÜREN</a></li>
+
+                                <li class="nav-link"><a href="{% url 'toranlagen' %}">TORANLAGEN</a></li>
+
+                                <li class="nav-link"><a href="{% url 'sonnen' %}">SONNEN-UND INSEKTENSCHUTZ</a></li>
+                                
+                                <li class="nav-link"><a href="{% url 'kontakt' %}">KONTAKT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <label class="hamburger-menu" >
+                <input type="checkbox" id="hamMenu" />
+            </label>
+            <aside class="sidebar">
+            <nav class="hamburger-links">
+                <ul class="">
+                    <li class="nav-link">
+                        <a href="#">FENSTER
+                            <ul class="subMenu">
+                                <li><a href="{% url 'fenster' %}">FENSTER</a></li>
+                                <li><a href="{% url 'kunalufenster' %}">KUNSTSTOFF ALU FENSTER</a></li>
+                                <li><a href="{% url 'holzalufenster' %}">HOLZ ALU FENSTER</a></li>
+                                <li><a href="{% url 'holzfenster' %}">HOLZFENSTER</a></li>
+                            </ul>
+                        </a>
+                    </li>
+
+                    <li class="nav-link"><a href="{% url 'turen' %}">TÜREN</a></li>
+
+                    <li class="nav-link"><a href="{% url 'toranlagen' %}">TORANLAGEN</a></li>
+                    
+                    <li class="nav-link"><a href="{% url 'sonnen' %}">SONNEN-UND INSEKTENSCHUTZ</a></li>
+                    
+                    <li class="nav-link"><a href="{% url 'kontakt' %}">KONTAKT</a></li>
+                </ul>
+            </nav>
+            </aside>
+            
+        </div>
+    </header>
+    
+    <main class="container">
+        <div style="margin-top:300px;"></div>
+        <h1>
+            Impressum
+        </h1>
+        <h3>
+            Fenster Pro Ramani Afrim e.U.
+        </h3>
+        <p>
+            Bahnstraße 1
+        </p>
+        <p>
+            3062 Kirchstetten
+        </p>
+        <p style="font-size: 1.5rem;">Telefon: <a href="tel:+43 {{number.number}}">+43 {{number.number}}</a></p>
+        <p style="font-size: 1.5rem;">Email: <a href="mailto:office@fensterpro.at">office@fensterpro.at</a></p>
+
+        <p>
+            Geschäftsführer: Afrim Ramani
+        </p>
+        <p>
+            Gesellschaftsform: Eingetragener Unternehmer (e.U.)
+        </p>
+        <p>
+            Firmenbuchnummer: FN616465t
+        </p>
+        <p>
+            Firmenbuchgericht: St.Pölten
+        </p>
+        <p>
+            Umsatzsteuer-Identifikationsnummer UID-Nummer: ATU74267802
+        </p>
+        <p>
+            Behörde gem. ECG (E-Commerce Gesetz): Bezirkshauptmannschaft
+St.Pölten
+        </p>
+
+    </main>
+
+    
+   <!-- Footer -->
+   <footer class="kilimanjaro_area">
+    <!-- Top Footer Area Start -->
+    <div class="foo_top_header_one section_padding_100_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="kilimanjaro_part">
+                        <img src="/static/images/logo.jpg" style="max-width: 200px;" alt="">
+                    </div>
+                </div>
+                
+                <div class="col-12  col-lg-3 kili-flex">
+                    <div class="kilimanjaro_part">
+                        <h5>KONTAKT</h5>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>Telefon:</h5>
+                            <p>+43 {{number.number}}</p>
+                        </div>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>Email:</h5>
+                            <p style="font-size: 1rem;">office@fensterpro.at</p>
+                        </div>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>Whatsapp:</h5>
+                            <a aria-label="Chat on WhatsApp" href="https://wa.me/43{{number.number}}"> <img alt="Chat on WhatsApp" src="/static/images/WhatsAppButtonWhiteSmall.svg" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="kilimanjaro_part">
+                        <h5>ÖFFNUNGSZEITEN</h5>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>Montag – Donnerstag</h5>
+                            <p>8:00 – 12:00 Uhr</p>
+                            <p>13:00 – 16:00 Uhr</p>
+                        </div>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>Freitag</h5>
+                            <p>8:00 – 12:00 Uhr</p>
+                        </div>
+                    </div>
+
+                    <div class="kilimanjaro_part">
+                        <h5>WICHTIGE LINKS</h5>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>
+                                <a href="{% url 'datenschutzerklärung' %}">Datenschutzerklärung</a>
+                            </h5>
+                        </div>
+                        <div class="kilimanjaro_single_contact_info">
+                            <h5>
+                                <a href="{% url 'impressum' %}">Impressum</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+              
+
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,797 @@
+@charset "utf-8";
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+/* *:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+} */
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+    opacity: 0.90;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+
+
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+/* CSS */
+.button-69 {
+  background-color: initial;
+  background-image: linear-gradient(#b7863a 0, #b7863a 100%);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: rgba(245, 244, 247, 0.25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  height: 60px;
+  line-height: 60px;
+  margin: -4px;
+  padding: 15px;
+  outline: 0;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.05, 0.03, 0.35, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: bottom;
+  text-wrap: nowrap;
+}
+
+.button-69:hover {
+  opacity: 0.7;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .button-69 {
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
+/* Footer */
+
+/*********footer*******************/
+.kilimanjaro_area {
+  position: relative;
+  z-index: 1;
+}
+.foo_top_header_one {
+  background-color: #15151e;
+  color: #000;
+}
+.section_padding_100_70 {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.foo_top_header_one {
+  color: #000;
+}
+.kilimanjaro_part {
+  margin-bottom: 30px;
+}
+.kili-flex{
+  display: flex;
+  gap: 50px;
+
+}
+.foo_top_header_one .kilimanjaro_part > h5 {
+  color: #000;
+}
+.kilimanjaro_part h4,
+.kilimanjaro_part h5 {
+  margin-bottom: 30px;
+}
+.kilimanjaro_single_contact_info > p,
+.kilimanjaro_single_contact_info > h5,
+.kilimanjaro_blog_area > a,
+.foo_top_header_one .kilimanjaro_part > p, .kilimanjaro_part a{
+  color: rgba(255, 255, 255, 0.5);
+}
+p,
+ul li,
+ol li {
+  font-weight: 300;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.kilimanjaro_bottom_header_one {
+  background-color: #111;
+}
+.section_padding_50 {
+  padding: 50px 0;
+}
+.kilimanjaro_bottom_header_one p {
+  color: #fff;
+  margin: 0;
+}
+p,
+ul li,
+ol li {
+  font-weight: 300;
+}
+.kilimanjaro_bottom_header_one a {
+  color: inherit;
+  font-size: 14px;
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: #b7863a;
+}
+.m-top-15 {
+  margin-top: 15px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.kilimanjaro_widget > li {
+  display: inline-block;
+}
+p,
+ul li,
+ol li {
+  font-weight: 300;
+}
+ol li,
+ul li {
+  list-style: outside none none;
+}
+.kilimanjaro_widget a {
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #888;
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  padding: 7px 12px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+main > ul li{
+  list-style:disc;
+}
+.kilimanjaro_links a {
+  border-bottom: 1px solid #333;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+.kilimanjaro_links a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+.m-top-15 {
+  margin-top: 15px;
+}
+.foo_top_header_one .kilimanjaro_part > h5 {
+  color: #fff;
+}
+.kilimanjaro_part h4,
+.kilimanjaro_part h5 {
+  margin-bottom: 30px;
+}
+
+.kilimanjaro_blog_area .kilimanjaro_date {
+  color: #27ae60;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.kilimanjaro_blog_area > p {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+.kilimanjaro_works > a {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 33.33333333%;
+  z-index: 1;
+}
+.kilimanjaro_thumb {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 75px;
+}
+.kilimanjaro_links a i {
+  padding-right: 10px;
+}
+/* :: 18.0 Footer Area CSS */
+
+.footer_area {
+  position: relative;
+  z-index: 1;
+}
+.footer_bottom p > i,
+.footer_bottom p > a:hover {
+  color: #27ae60;
+}
+
+.single_feature:hover .feature_text h4 {
+  color: #27ae60;
+}
+.kilimanjaro_blog_area {
+  border-bottom: 1px solid #333;
+  margin-bottom: 15px;
+  padding: 0 0 15px 90px;
+  position: relative;
+  z-index: 1;
+}
+.kilimanjaro_links a {
+  border-bottom: 1px solid #333;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+/* Mine */
+.conth1 {
+  color: white;
+  font-size: 4.5rem;
+  text-align: center;
+  padding-bottom: 20px;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 15px 0;
+  font-size: 1.25rem;
+}
+
+.container {
+  padding: 0px 50px;
+  margin: 0px auto;
+  max-width: 1310px;
+}
+
+/* header */
+.mainHeader{
+    position: fixed; 
+    top: 0;  
+    width: 100%; 
+    z-index: 999;
+}
+
+.mainHeader-Top{
+    background-color: black; 
+    width: 100%;
+}
+
+.mainHeade-minHeight{
+    min-height: 30px;
+}
+
+.mainHeader-Top-Text{
+    color: white; 
+    font-size: medium; 
+    line-height: 1rem; 
+    margin: auto; 
+    padding: 5px 0px;
+}
+
+.menu{
+    display: flex; 
+    gap: 30px; 
+    color: #b7863a; 
+    text-wrap: nowrap; 
+    font-size: large;
+}
+
+#mainMenu{
+    display: block;
+}
+
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #333;
+  --background: white;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: none;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  top: 60px;
+  right: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: white;
+  --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: 100%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(100px + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  width: 350px;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
+.hamburger-links{
+    padding: 120px 0;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background:#000;
+    opacity: .5;
+    display:none;
+}
+
+.nav-link a{
+    color: #b7863a;
+}
+
+/* main sec1 */
+.main-sec1-1{
+    background-image: url("/static/images/1.jpg"); 
+    background-repeat: no-repeat; 
+    background-position: 0% 0%; 
+    background-attachment: fixed; 
+    background-size:cover;
+}
+.main-sec1-2{
+    height: 959px; 
+    padding-top: 88px; 
+    padding: 88px 50px 0px 50px; 
+    margin: 0px auto; 
+    max-width: 1310px;
+}
+.main-sec1-3{
+    margin: auto; 
+    padding: 50px 0 50px 0; 
+    width: 100%; 
+    height: 100%;
+}
+.main-sec1-4{
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+.main-sec1-button1{
+    width: 100%; 
+    text-align: center;
+}
+.main-sec1-button2{
+    background-color: #b7863a; 
+    border-color: #b7863a; 
+    min-width: 200px; 
+    padding: 25px 50px 23px; 
+    font-size: 15px; 
+    border-radius: 3px; 
+    margin:3px 0; 
+    line-height: 1.2em; 
+    text-align: center; 
+    max-width: 100%; 
+    color: white; 
+    text-decoration: none;
+}
+.main-header-font{
+    font-size: 4.5rem;
+}
+
+/* 1 */
+.sec1-1{
+    background-color: white; 
+    width: 100%;
+}
+.sec1-2{
+    padding: 50px 0 50px 0; 
+    display: flex;
+}
+.twothirds{
+    width: 65%;
+}
+.third{
+    width: 30%;
+}
+.carousel-border{
+    border:1px solid #b7863a; 
+    border-radius: 10px;   
+    margin-left: 50px;
+}
+
+
+/* 2 */
+.sec2-1{
+    background-color: rgb(231, 231, 231); 
+    width: 100%;
+}
+.car-half-1{
+    display: flex; 
+    gap: 75px;
+}
+.car-half-1 > div{
+    width: 50%;
+}
+
+/* 4 */
+.car-third-1{
+    display: flex; 
+    gap: 75px; 
+    margin: 50px 0 50px 0;
+}
+.car-third-1 div{
+    width: 30%;
+}
+
+.icon-list{
+    display: flex; 
+}
+.icon-bg{
+    background-color: #b7863a;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    margin-left: 2px;
+    z-index: 5;
+    color: #fff;
+}
+
+.card-one{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+.card-one img{
+    width:70%;
+    align-self: center; 
+}
+
+.half{
+  width: 50%;
+}
+
+.half > li{
+  height: 350px;
+}
+
+.subMenu{
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 9px rgba(0,0,0,0.1);
+  transition: all ease 2s;
+  margin-top: -50px;
+  display: none;
+}
+
+.subMenu li{
+  margin: 30px;
+  text-align: center;
+}
+
+li:hover > a{
+  color: black;
+}
+
+li:hover .subMenu{
+  display: block;
+  margin-top: 0;
+}
+
+
+td *{
+  text-align: left;
+}
+
+td img{
+  height: auto;
+  min-width: 70px;
+  padding-right: 15px;
+}
+
+tr td{
+  vertical-align: top;
+}
+
+
+.question{
+  font-weight: bold;
+  color: #b7863a;
+}
+
+@media (max-width:1225px)
+{
+    #mainMenu{
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-link a{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:992px)
+{
+    .kili-flex{
+      flex-direction: column;
+    }
+}
+
+@media (max-width:770px)
+{
+    .conth1{
+        font-size: 2rem;
+    }
+
+    h3{
+      font-size: 1.5rem;
+    }
+
+    p{
+      font-size: 1.25rem;
+    }
+
+    .sec1-2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .twothirds{
+        width: 100%;
+    }
+    .third{
+        width:100%
+    }
+
+    .car-half-1{
+        flex-direction: column;
+    }
+    .car-half-1 div{
+        width: 100%;
+    }
+
+    .car-third-1{
+        flex-direction: column;
+    }
+    .car-third-1 div{
+        width: 100%;
+    }
+
+    .main-header-font{
+        font-size: 3.5rem;
+    }
+
+    .icon-list{
+        flex-direction: column;
+    }
+
+    .card-one{
+        flex-direction: column;
+    }
+    .card-one img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .half{
+      width: 100%;
+    }
+
+    .half > li{
+      height: auto;
+      margin-top: 25px;
+    }
+
+    .main-sec1-button2{
+      min-width: 100px;
+      padding: 5px 20px;
+    }
+
+    .contactPage{
+      flex-direction: column;
+    }
+}
+
